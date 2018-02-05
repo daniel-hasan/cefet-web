@@ -27,7 +27,7 @@
 # Aulas
 
 - [Introdução à Programação Web](classes/intro/)
-- [HTML parte 1](classes/html1/) - Plantas Carnívoras, Ingredientes do HTML
+<!--- [HTML parte 1](classes/html1/) - Plantas Carnívoras, Ingredientes do HTML
   (_tags_) e Temperando com CSS
 - [HTML parte 2](classes/html2/) - Coding Dojo :japanese_castle:, Mais _tags_
   HTML e Entendendo regras CSS
@@ -36,9 +36,6 @@
   Abelhas :honeybee:
 - [CSS parte 2](classes/css2/) - História, a Cascata e outros Seletores,
   Ferramentas e Ninjas :dash:
-
----
-<!-- {"layout": "regular"} -->
 # Aulas (página 2)
 
 - [HTML parte 4](classes/html4/) - Div/Span, Box Model, Float e Desafios
@@ -52,8 +49,6 @@
 - [JavaScript parte 1](classes/js1/) - Características, Escrevendo código,
   Clicando em botões e Resolvendo equações :chart_with_upwards_trend:
 
----
-<!-- {"layout": "regular"} -->
 # Aulas (página 3)
 
 - [JavaScript parte 2](classes/js2/) - Arranjos, Alterando o DOM e Exploração
@@ -69,8 +64,6 @@
 - [JavaScript parte 5](classes/js5/) - Web Storage, JSON e a Lista de
   Tarefas :notebook: x2
 
----
-<!-- {"layout": "regular"} -->
 # Aulas (página 4)
 
 - [JavaScript parte 6](classes/js6/) - Bibliotecas, jQuery e o PhotoSnap x2
@@ -79,7 +72,7 @@
   Dinâmicos :crown:
 - [JavaScript parte 7](classes/js7/) - Ajax e as Guerras Estelares :stars:
 
-
+-->
 ---
 <!--
 {
@@ -91,13 +84,13 @@
 
 ## Objetivos
 
-1. **Criar páginas web** _estáticas_ com HTML, CSS e JavaScript
+1. **Criar aplicações web** com HTML, PHP/MySQL, CSS e JavaScript
 1. Criar páginas seguindo **requisitos de *layout*** diversos
-1. Criar **páginas web interativas** usando JavaScript
-1. **Integrar páginas** web estáticas com servidores **via AJAX**
-1. Tornar-se um **ninja** Javascript
+1. Criar **páginas web interativas** usando JavaScript e PHP
+1. **Integrar páginas** com servidores **via AJAX**
 
-<!-- {ol:.content} -->
+
+
 
 ---
 <!--
@@ -205,6 +198,67 @@ Veja a bibliografia básica e a complementar.
 **Editora**
   ~ O'Reilly Media, 2014 (tradução)
 
+
+
+---
+## **Livro texto** sobre PHP
+
+::: figure .book
+- ![](images/capa_php.jpg) <!-- {.full-width.full-height} -->
+- .
+<!-- {ul:.hardcover_front} -->
+- .
+- [Sobre](https://novatec.com.br/livros/aplicacoes-web-com-php-mysql-2ed/) <!-- {a:.book-btn target="_blank"} -->
+- .
+- .
+- .
+<!-- {ul:.page} -->
+- .
+- .
+<!-- {ul:.hardcover_back} -->
+- .
+- .
+<!-- {ul:.book_spine} -->
+:::
+
+**Título**
+  ~ Construindo aplicação web com PHP e MySQL, 1ª edição
+
+**Autor**
+  ~ André Milani
+
+**Editora**
+  ~ Novatec, 2010
+---
+
+## **Livro texto** sobre PHP
+
+::: figure .book
+- ![](images/book-head-first-php.jpg) <!-- {.full-width.full-height} -->
+- .
+<!-- {ul:.hardcover_front} -->
+- .
+- [Sobre](http://www.altabooks.com.br/use-a-cabeca-php-and-mysql.html) <!-- {a:.book-btn target="_blank"} -->
+- .
+- .
+- .
+<!-- {ul:.page} -->
+- .
+- .
+<!-- {ul:.hardcover_back} -->
+- .
+- .
+<!-- {ul:.book_spine} -->
+:::
+
+**Título**
+  ~ Use a Cabeça: PHP & MySQL, 1ª edição
+
+**Autor**
+  ~ Lynn Beighley
+
+**Editora**
+  ~ O'Reilly Media, 2010 (tradução)
 ---
 # Bibliografia Complementar
 
