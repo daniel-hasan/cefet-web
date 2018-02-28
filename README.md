@@ -29,9 +29,8 @@
 - [Introdução à Programação Web](classes/intro/)
 - [HTML parte 1](classes/html1/) - Plantas Carnívoras, Ingredientes do HTML
   (_tags_) e Temperando com CSS
-<!--- - [HTML parte 2](classes/html2/) - Coding Dojo :japanese_castle:, Mais _tags_
   HTML e Entendendo regras CSS
-- [HTML parte 3](classes/html3/) - Tabelas, Tesouros :crown: e Piratas
+<!---- [HTML parte 3](classes/html3/) - Tabelas, Tesouros :crown: e Piratas
 - [CSS parte 1](classes/css1/) - Seletores de classe, Flutuação e
   Abelhas :honeybee:
 - [CSS parte 2](classes/css2/) - História, a Cascata e outros Seletores,
