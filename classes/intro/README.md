@@ -746,8 +746,6 @@ deixar o computador ligado**, em qualquer parte do mundo.
 <!-- {"layout": "regular"} -->
 ## Servidores Web
 
-- É o **programa que executa** em um computador **24/7** e _"conversa" com os
-  navegadores_
 - **Atende _solicitações_** de *download* de arquivos e **entrega as _respostas_**
 - Funções:
   - armazenar, processar e entregar páginas web para clientes
@@ -776,9 +774,7 @@ solicitado não exista? **Em que "língua"** que o servidor web e o navegador v�
 ## **HTTP**
 
 - É um **protocolo** na camada de aplicação
-  > Conjunto de regras bem definidas descrevendo como
-  > entidades se comunicam.
-  - É a **"língua falada" pelo navegador e pelo servidor web**
+
 - Modelo requisição &rarr; resposta
   ::: figure .figure-slides.no-margin
   ![](../../images/http-diagram-informal.png) <!-- {.bullet.figure-step.bullet-no-anim} -->
@@ -868,7 +864,6 @@ Content-Length: 131
 <!-- {"preventSelection": "code", "elementStyles": {"pre": "height: 250px"} } -->
 # Atividade Prática (2/3)
 
-- **Atividades**
   - Digite a estrutura básica de um documento HTML
     ```html
     <!DOCTYPE html>
@@ -914,6 +909,8 @@ Content-Length: 131
     </html>
     ```
     - Repare que não é possível copiar/colar ;)
+    - Logo após, altere o conteúdo dentro do `body` usando as _tags_: `del`, `em`,`ins` e `mark`. Veja o que ocorre e entenda o funcionamento de cada uma _tag_ usada. Por exemplo:
+      - `O <del>interessante</del> surpreendente animal`
 
 ---
 # Atividade Prática (3/3)
@@ -928,4 +925,4 @@ Content-Length: 131
   ~ Além disso, você deve compactar a pasta com todos os seus arquivos em
     um arquivo `.zip` e então **enviar esse arquivo via [Moodle][moodle]**
 
-[moodle]: http://ava.cefetmg.br
+[moodle]: https://ava.cefetmg.br/course/view.php?id=331
