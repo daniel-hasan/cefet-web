@@ -19,7 +19,7 @@
 ---
 # Hoje veremos...
 
-1. [Resolvendo Equações!](#resolvendo-equacoes)
+1. [Resolvendo Equações!!](#resolvendo-equacoes)
 1. [Características da linguagem](#caracteristicas-da-linguagem)
 1. [Escrevendo código](#escrevendo-codigo)
 1. [Clicando em um botão](#clicando-em-um-botao)
