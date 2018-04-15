@@ -546,7 +546,7 @@ let listaDeCoisas = ['Aew', 35, true, [], 'outra string'];
 ---
 <!-- {"slideHash": "alternando-uma-classe"} -->
 # Alternando uma classe
-
+     
 - Às vezes queremos colocar/remover uma classe em um elemento **alternadamente**
 - Para isso, existe o `document.classList.toggle('nome-da-classe')`
 - Além de colocar/remover a classe, **o método retorna**:
