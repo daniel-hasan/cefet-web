@@ -26,7 +26,7 @@ visualizar os resultados em um gráfico²; (d) um player de música com criaçã
 de playlists etc.
 
 **Nota:** neste trabalho, você vai precisar buscar por bem mais informações
-do que aquelas que foram abordadas em sala de aula durante o ano!
+do que aquelas que foram abordadas em sala de aula durante o semestre!
 
 ¹ _Login_: permitir que usuários se cadastrem na aplicação requer o uso de
 banco de dados e um _back-end_, que são assuntos que não foram cobertos
@@ -41,7 +41,7 @@ seguintes itens:
 
 1. Permitir que **o usuário crie conteúdo** (e.g., tarefas, playlists,
    avatares, enquetes etc.) durante sua interação com a aplicação
-1. Persistência de dados usando _web storage_
+1. Persistência de dados usando _web storage_ (ver video aula)
 1. **_Layout_ e _design_ agradáveis** - não pode ter carinha de site da década
    de 90, nem dos anos 2000
 1. Uma janela modal contendo **informações sobre a aplicação**, informando
