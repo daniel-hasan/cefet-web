@@ -77,10 +77,7 @@ em sua aplicação web um subconjunto dos seguintes itens opcionais:
    - :bomb: (até +15%) Phaser (para jogos que usam o &lt;canvas&gt;&lt;/canvas&gt;)
 1. (+5%) Usar transformações, transições e animações (com parcimônia,
    sem exageros) para tornar a interação visualmente mais atrativa [ver slides](https://fegemo.github.io/cefet-front-end/classes/css6)
-1. :bomb: (+7%) Usar AJAX para buscar algum tipo de dados
-
-Legenda:
-- :bomb: assuntos que não são cobertos na nossa disciplina (este semestre) e são considerados complicados para serem usados neste trabalho
+1. (+7%) Usar AJAX para buscar algum tipo de dados
 
 [superpremium]: https://www.youtube.com/watch?v=4CooiNDnPHI
 [geolocation]: http://fegemo.github.io/cefet-web/classes/js5/#5
