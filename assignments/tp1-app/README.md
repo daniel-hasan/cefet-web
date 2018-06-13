@@ -46,7 +46,7 @@ seguintes itens:
 1. **_Layout_ e _design_ agradáveis** - não pode ter carinha de site da década de 90, nem dos anos 2000
 1. Uma janela modal contendo **informações sobre a aplicação**, informando
    quem são os **autores do site** (o grupo). 
-   - [API que implementa janela modal)](https://jqueryui.com/dialog/#modal-message)
+   - [API que implementa janela modal](https://jqueryui.com/dialog/#modal-message)
    - [Veja os slides sobre uso de bibliotecas JavaScript](https://fegemo.github.io/cefet-front-end/classes/js6)
 
 Como você é um aluno [qualidade super premium][superpremium], você
