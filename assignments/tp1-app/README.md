@@ -44,6 +44,7 @@ seguintes itens:
    avatares, enquetes etc.) durante sua interação com a aplicação
 1. Persistência de dados usando _web storage_ [(ver slides)](https://fegemo.github.io/cefet-front-end/classes/js5)
 1. **_Layout_ e _design_ agradáveis** - não pode ter carinha de site da década de 90, nem dos anos 2000
+1. Posicionar alguns itens de forma não estática
 1. Uma janela modal contendo **informações sobre a aplicação**, informando
    quem são os **autores do site** (o grupo). 
    - [API que implementa janela modal](https://jqueryui.com/dialog/#modal-message)
