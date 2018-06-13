@@ -26,7 +26,7 @@ navinha, de perguntas e respostas, tamagotchi; (c) um sistema de enquetes
 que permite o usuário criar enquetes, enviá-las para outras pessoas e
 visualizar os resultados em um gráfico²; (d) um player de música com criação de playlists etc.
 
-**Nota:** neste trabalho, você vai precisar buscar por bem mais informações
+**Nota:** neste trabalho, você vai precisar buscar por mais informações
 do que aquelas que foram abordadas em sala de aula durante o semestre!
 
 ¹ _Login_: permitir que usuários se cadastrem na aplicação requer o uso de
@@ -43,8 +43,7 @@ seguintes itens:
 1. Permitir que **o usuário crie conteúdo** (e.g., tarefas, playlists,
    avatares, enquetes etc.) durante sua interação com a aplicação
 1. Persistência de dados usando _web storage_ [(ver slides)](https://fegemo.github.io/cefet-front-end/classes/js5)
-1. **_Layout_ e _design_ agradáveis** - não pode ter carinha de site da década
-   de 90, nem dos anos 2000
+1. **_Layout_ e _design_ agradáveis** - não pode ter carinha de site da década de 90, nem dos anos 2000
 1. Uma janela modal contendo **informações sobre a aplicação**, informando
    quem são os **autores do site** (o grupo). [(veja aqui)](https://jqueryui.com/dialog/#modal-message)[(veja slides sobre bibliotecas JavaScript)](https://fegemo.github.io/cefet-front-end/classes/js6)
 
@@ -109,9 +108,7 @@ Alguns descuidos podem fazer com que sua nota fique muito abaixo do esperado:
 
 ## O que deve ser **entregue**
 
-O trabalho deve ser entregue de duas formas: (a) um arquivo compactado
-contendo todo o site e (b) uma URL apontando para o site hospedado na Internet.
-É isso mesmo. Na Internet :3!!
+O trabalho deve ser apresentado de duas formas (a): Código fonte e descrição dos itens a serem avaliados; (b) uma URL apontando para o site hospedado na Internet.
 
 Para tanto, o grupo deve publicar o site
 **usando algum serviço de hospedagem gratuito**. Ouvi dizer que o
@@ -119,14 +116,13 @@ Para tanto, o grupo deve publicar o site
 sobre [Git][git] e [GitHub][github], o [Github Pages][gh-pages] também é
 uma boa opção.
 
-Ao final do seu trabalho, você deve submeter pelo Moodle o arquivo compactado
-e o link para seu site nas Interwebs.
+Para tanto, você deverá enviar no moodle um arquivo contendo:
 
-## O que deve ser **apresentado**
+- Código fonte do site
+- Um documento *PDF* contendo, para cada item que vale ponto implementado, a descrição deste item e a indicação dele no código (por ex. linhas X do arquivo blah). Não adicione código fonte neste documento.  
+- Um arquivo texto com o link para seu site nas Interwebs.
 
-Em uma aula a ser marcada, o trabalho deve ser apresentado em sala de aula.
-Não é necessário fazer uma apresentação, mas apenas mostrar o site e falar
-sobre como foi seu desenvolvimento.
+
 
 
 [neocities]: https://neocities.org/
