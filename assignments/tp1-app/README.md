@@ -81,6 +81,11 @@ em sua aplicação web um subconjunto dos seguintes itens opcionais:
    sem exageros) para tornar a interação visualmente mais atrativa [ver slides](https://fegemo.github.io/cefet-front-end/classes/css6)
 1. (+7%) Usar AJAX para buscar algum tipo de dados
 
+
+Legenda:
+- :bomb: assuntos que não são cobertos na nossa disciplina (este semestre) e são considerados complicados para serem usados neste trabalho
+
+
 [superpremium]: https://www.youtube.com/watch?v=4CooiNDnPHI
 [geolocation]: http://fegemo.github.io/cefet-web/classes/js5/#5
 [canvas]: http://fegemo.github.io/cefet-web/classes/js5/#17
