@@ -203,7 +203,7 @@ $senha_cript = password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 - PDO
 <!-- {ul:.content} -->
 ---
-# Sintaxe Básica
+## Classes - Sintaxe Básica
 ```php
 <?php
 class Pessoa{
@@ -235,7 +235,7 @@ function x(){
 	yield "tudo";
 	yield "joia";
 	//seria o mesmo que
-	return array("oi","tudo","joia");
+	//return array("oi","tudo","joia");
 }
 foreach(x() as el){
 	print(el);
@@ -274,7 +274,30 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 }
 ```
 
+---
+## Obtenção de dados enviados pelo formulário
+```html
+<?php
+if($_POST){
+  /**realiza o processamento do post
+     usando: $_POST["nome"], $_POST["mensagem"] e $_POST["email"] **/
+     $to      = 'admin@piratas.com';
+     $subject = 'Contato: '.$_POST["nome"];
+     $message = $_POST["mensagem"];
+     $headers = 'From: '.$_POST["email"]. "\r\n" .
+         'Reply-To: '.$_POST["email"]. "\r\n" .
+         'X-Mailer: PHP/' . phpversion();
 
+     mail($to, $subject, $message, $headers);
+}
+?>
+<form action="contato.php" method="post">
+  <input type="text" name="nome" placeholder="Nome do Usuario">
+  <input type="text" name="email" placeholder="e-mail">
+  <textarea name="mensagem"></textarea>
+  <input type="submit" value="enviar">
+</form>
+```
 
 ---
 # Referências
