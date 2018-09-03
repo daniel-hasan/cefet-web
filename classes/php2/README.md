@@ -1,13 +1,13 @@
 <!-- {"layout": "title"} -->
 # PHP - Parte 2
-## Inclusão de arquivs PHP, autenticação, arquivos e classes, PDO :crown: x3
+## Inclusão de arquivs PHP, autenticação, classes, PDO, piratas :crown: x2
 
 ---
 # O que veremos hoje
 
-1. [Inclusão de arquivos PHP](#inclusao-php)
-1. [Sessões e Autenticação](#servidor-apache)
-1. [Classes](#classes)
+1. Inclusão de arquivos PHP
+1. Sessões e Autenticação
+1. Classes
 1. [Banco de Dados usando PDO](#pdo)
 
 <!--   1. Instalando Apache, MySQL e PHP
@@ -15,7 +15,6 @@
 
 <!--*[PHP]: PHP Hypertext Preprocessor*-->
 ---
-<!-- {"layout": "section-header", "slideHash": "servidor-web"} -->
 # Inclusão de Arqivos PHP
 
 - Reaproveitamento de HTML/PHP
