@@ -138,7 +138,7 @@ https://pages.github.com/. Não se esqueça de fazer vários e
 pequenos _commits_, que é uma importante boa prática em git e também é
 interessante para demonstrar seu progresso.
 
-Além disso, você preencherá um questionário contendo a lista de itens extras (ou penalidades) as quais está pleiteando.
+Além disso, você deve submeter um arquivo README {.pdf, .md, .txt, .html} que contenha a lista de itens extras (ou penalidades) as quais está pleiteando.
 
 Ao final do seu trabalho, você deve submeter pelo SIGAA o link do seu repositório 
 e o link do seu site hospedado.
