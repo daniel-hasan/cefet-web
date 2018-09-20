@@ -134,7 +134,9 @@ Alguns descuidos podem fazer com que sua nota fique muito abaixo do esperado:
 O trabalho deve ser entregue via GitHub e hospedado via github pages. 
  Uma
 descrição completa dos passos para se fazer a publicação via GitHub  pode ser encontrada em
-https://pages.github.com/.
+https://pages.github.com/. Não se esqueça de fazer vários e
+pequenos _commits_, que é uma importante boa prática em git e também é
+interessante para demonstrar seu progresso.
 
 Além disso, você preencherá um questionário contendo a lista de itens extras (ou penalidades) as quais está pleiteando.
 
