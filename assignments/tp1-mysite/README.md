@@ -92,7 +92,7 @@ listadas abaixo, você precisa pagar uns pontinhos:
 
 - jQuery (-8%)
   - Plugin jQuery de terceiros (-2% cada)
-- Bootstrap/Foundation/Nib/MaterializeCSS (-8%)
+- Foundation/Nib (-8%)
 
 
 ## Política da Privacidade
