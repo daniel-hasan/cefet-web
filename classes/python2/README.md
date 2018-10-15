@@ -69,7 +69,7 @@ nome, num = exemplo() #nome = 'casa' e num = 2948
 ```
 ---
 ## Função `set`
-
+- Inicializa um conjunto como conjunto vazio
 - Converte uma elemento iterável em conjunto
 - Elemento iterável é qualquer tipo de variável que podemos iterar (usando for, por exemplo):
   - Exemplo: `string`, `vetores`
