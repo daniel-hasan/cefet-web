@@ -207,7 +207,7 @@ print(strTexto)
 # _Statements_
 
 - Em uma **função**, **condição** ou **estrutura de repetição**:  
-  - seus blocos são definido por **identação**
+  - seus blocos são definidos por **identação**
   - identação deve ser consistente (pelo número de `tab` ou `espaços`)
 
 - Em condicionais e estrutura de repetição, não é necessário usar parênteses
@@ -377,7 +377,7 @@ h = f(1,2,3)#Variáveis visíveis aqui: x,h
 ```python
 def add(a,b):
   return a+b
-  
+
 if __name__ == "__main__":
   x = add(3,1)
   print("Resultado: "+str(x))
