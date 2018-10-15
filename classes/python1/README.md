@@ -119,8 +119,8 @@
       global lambda  
   </pre>
   Nomes de variáveis devem:
-  - **Começar com:** `\_`  ou letras
-  - **O restante:** `\_` letras e números
+  - **Começar com:** `_`  ou letras
+  - **O restante:** `_` letras e números
 
 ---
 ## Tipos de dados (cont.)
@@ -153,13 +153,14 @@ w = type(z) == int #w = False
 compX = complex('1+2j')
 intY = 2
 fltZ = 2.5
+bolW = True
 strDado = "Olá!"
 soma = compX+intY+fltZ
-strTexto = strDado+" Resultado: "+str(soma)
+strTexto = strDado+" Resultado: "+str(soma)+" Boleano:"+str(bolW)
 print(strTexto)
 ```
 :::result
-  Olá! Resultado: (5.5+2j)
+  Olá! Resultado: (5.5+2j) True
 :::
 
 
@@ -178,7 +179,7 @@ print(strTexto)
 - Listas são estruturas de dados unidimensionais, **heterogêneas**
 - Os itens das listas **não** precisam ter o mesmo tipo
   ```python
-  listaDeCoisas = ['Aew', 35, true, [], 'outra string'];
+  listaDeCoisas = ['Aew', 35, True, [], 'outra string'];
   ```
 - Use a função `len` para retornar o tamanho
 - Faça indexação usando `[` e `]`
@@ -237,9 +238,9 @@ else:
   conceito = 'F'
 ```
 ---
-Estrutura de Repetição (1/2)
+Estrutura de Repetição (1/3)
 
-- Simples: <br><!-- {ul:style="display: flex; flex-direction: row; justify-content: space-around;font-size:0.5em;"} -->
+- Simples:
   ```python
     for i in range(4):
       print(i)
@@ -250,29 +251,30 @@ Estrutura de Repetição (1/2)
   2<br>
   3
   :::
-- Percorrer uma lista:<br>
-  ```python
-    frutas = ['kiwi','banana','pêra']
-    for fruta in frutas:
-      print(fruta)
-  ```
-  :::result
-  kiwi<br>
-  banana<br>
-  pêra
-  :::
-- Percorrer um vetor (com índice):<br>
-  ```python
-    frutas = ['kiwi','banana','pêra']
-    for i,fruta in enumerate(frutas):
-      print(str(i)+":"+fruta)
-  ```
-  :::result
-  0: kiwi<br>
-  1: banana<br>
-  2: pêra
-  :::
 
+---
+  Estrutura de Repetição - Percorrendo Listas (2/3)
+
+  - Sem índice:<br><!-- {ul:style="display: flex; flex-direction: row; justify-content: space-between;"}-->
+    ```python
+      frutas = ['kiwi','pêra']
+      for fruta in frutas:
+        print(fruta)
+    ```
+    :::result
+    kiwi<br>
+    pêra
+    :::
+  - Com índice:<br>
+    ```python
+      frutas = ['kiwi','pêra']
+      for i,fruta in enumerate(frutas):
+        print(str(i)+":"+fruta)
+    ```
+    :::result
+    0: kiwi<br>
+    2: pêra
+    :::
 ---
 Estrutura de Repetição (2/2)
 
@@ -375,6 +377,7 @@ h = f(1,2,3)#Variáveis visíveis aqui: x,h
 ```python
 def add(a,b):
   return a+b
+  
 if __name__ == "__main__":
   x = add(3,1)
   print("Resultado: "+str(x))
@@ -412,7 +415,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 ---
-<!-- {"layout": "section-header", "slideHash": "execucao"} -->
+<!-- {"layout": "section-header", "slideHash": "exercicio"} -->
 # Execícios
 ## Exercícios para se sentir confortável com a linguagem
 
