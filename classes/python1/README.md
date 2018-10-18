@@ -179,7 +179,7 @@ print(strTexto)
 - Listas são estruturas de dados unidimensionais, **heterogêneas**
 - Os itens das listas **não** precisam ter o mesmo tipo
   ```python
-  listaDeCoisas = ['Aew', 35, True, [], 'outra string'];
+  listaDeCoisas = ['Aew', 35, True, [], 'outra string']
   ```
 - Use a função `len` para retornar o tamanho
 - Faça indexação usando `[` e `]`
@@ -238,12 +238,13 @@ else:
   conceito = 'F'
 ```
 ---
-Estrutura de Repetição (1/3)
+## Estrutura de Repetição Simples  (1/3)
 
-- Simples:
+
+- De `i=0`; enquanto `i<4`<!-- {li:style="display: inline-block; width:30%;border-right:1px dashed black; padding-right: 10px;font-size:0.8em;"}-->
   ```python
-    for i in range(4):
-      print(i)
+  for i in range(4):
+    print(i)
   ```
   :::result
   0<br>
@@ -251,29 +252,53 @@ Estrutura de Repetição (1/3)
   2<br>
   3
   :::
+- De i=1; enquanto i<6; passo 2:<!-- {li:style="display: inline-block; width:30%;border-right:1px dashed black; padding-right: 10px;font-size:0.8em;"}-->
+  ```python
+  for i in range(1,6,2):
+    print(i)
+  ```
+  :::result
+  1<br>
+  3<br>
+  5
+  :::
+- De i=1; enquanto i<6; passo 2:<!-- {li:style="display: inline-block; width:30%; padding-right: 10px;font-size:0.8em;"}-->
+    ```python
+    for i in range(1,6,2):
+      print(i)
+    ```
+    :::result
+    1<br>
+    3<br>
+    5
+    :::  
+```python
+>>> range(1,6,2)
+[1, 3, 5]
+```
 
 ---
   Estrutura de Repetição - Percorrendo Listas (2/3)
 
-  - Sem índice:<br><!-- {ul:style="display: flex; flex-direction: row; justify-content: space-between;"}-->
+  - Sem índice:<br><!-- {li:style="display: inline-block; width:43%;border-right:1px dashed black; padding-right: 10px;"}-->
     ```python
-      frutas = ['kiwi','pêra']
-      for fruta in frutas:
-        print(fruta)
+    frutas = ['kiwi','pêra']
+    for fruta in frutas:
+      print(fruta)
     ```
     :::result
     kiwi<br>
     pêra
     :::
-  - Com índice:<br>
+  - Com índice:<br><!-- {li:style="display: inline-block; width:52%;"}-->
     ```python
-      frutas = ['kiwi','pêra']
-      for i,fruta in enumerate(frutas):
-        print(str(i)+":"+fruta)
+    frutas = ['kiwi','pêra']
+    for i,fruta in enumerate(frutas):
+      print(str(i)+":"+fruta)
     ```
     :::result
     0: kiwi<br>
-    2: pêra
+    1: pêra
     :::
 ---
 Estrutura de Repetição (2/2)
@@ -320,15 +345,15 @@ x = add(2,b=5)
 ---
 ## Funções - Valores _default_ (1/2)
 
-- Definindo-se valores _default_ para argumentos, eles podem ser omitidos:
+- Definindo-se valores _default_ para argumentos. Assim, estes argumentos podem ser omitidos na hora de invocar a função:
   ```python
   def add(a, b=1, c=0):
     return a + b + c
 
   x = add(2,5,1)   # x = 8
   x = add(2,5)     # x = 7
-  x = add(2)     # x = 6
-  x = add(2,c=2)     # x = 4
+  x = add(2)     # x = 3
+  x = add(2,c=2)     # x = 5
   ```
 ---
 ## Funções - Valores _default_ (2/2)
@@ -439,7 +464,7 @@ def add(a,b):
   return a+b
 
 if __name__ == "__main__":
-  x = add(a,b)
+  x = add(2,3)
   print("Soma: "+str(x))
 ```
 
@@ -448,7 +473,7 @@ if __name__ == "__main__":
 
 Você deverá fazer as seguintes funções. Não é permitido usar funções prontas da linguagem (ex. somatório usando `sum`). Teste-as 'no main' usando valores fixos:
 
-- `maximo(a,b)`: Retorna o valor máximo entre a e b
+- `maior(a,b)`: Retorna o maior valor entre a e b
 - `soma(lista,x)`: retorna o somatório dos valores passados pela lista. O  argumento `x` deve ser opcional que, se passado, será somado ao resultado final.
 - `media(lista)`: Retorna a média dos valores passados pela lista.
 - `valores_iguais(lista1,lista2)`: retorna uma lista contendo os valores iguais entre as duas listas passadas como parâmetro
