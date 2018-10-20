@@ -1,16 +1,22 @@
 <!-- {"layout": "title"} -->
-# Python - Parte 1
-## Características e Delícias da linguagem
+# Python - Parte 2
+## Uso de listas e strings, outras coleções e classes
 
 ---
 <!-- {"layout": "regular"} -->
 # Roteiro
 
-1. [Características da linguagem](#caracteristicas)
-1. [Sintaxe Básica](#sintaxe)
-1. [Estrutura de dados](#estruturaDados)
-1. [_Statements_](#statements)
-1. [Questões práticas](#execucao)
+1. [Mais sobre listas e Strings](#string_lista)
+1. [Outras coleções](#mais-colecoes)
+1. [Classes](#classes)
+1. [Prática - biblioteca](#pratica)
+---
+<!-- {"layout": "section-header", "slideHash": "string_lista"} -->
+# Mais sobre listas e Strings
+## Métodos úteis para esses dois tipos de dados
+
+- Listas: ordenação, sublistas e inserção
+- Strings: Formatação, maiúsculas, ....
 
 ---
 ## Listas - operações úteis
@@ -44,7 +50,7 @@ frutas = ", ".join(["pera","uva","banana"]) #frutas = "pera, uva, banana"
 [Veja lista completa de métodos](https://docs.python.org/3.5/library/stdtypes.html#string-methods)
 
 ---
-<!-- {"layout": "section-header", "slideHash": "estruturaDados"} -->
+<!-- {"layout": "section-header", "slideHash": "mais-colecoes"} -->
 # Mais coleções
 ## Outras coleções e seus métodos/funções úteis
 
@@ -70,7 +76,6 @@ def exemplo():
 
 x,y = 1,5# x = 1 e y = 5
 nome, num = exemplo() #nome = 'casa' e num = 2948
-
 ```
 ---
 ## Conjuntos
@@ -78,7 +83,7 @@ nome, num = exemplo() #nome = 'casa' e num = 2948
 - Conjunto: coleção **não ordenada** de **elementos únicos**
 - Cada elemento deve ser `hashable`, ou seja:
   - Imutável
-  - Implementa os métodos: `__hash__()`, `__eq__()` ou `__cmp__()`
+  - Implementa os métodos: `__hash__()` e `__eq__()`
   - Exemplos: string, inteiro, float, tuplas
 - Uso:
 ```python
@@ -194,6 +199,7 @@ y = x.items() #y = [('Débora',21), ('Alice',16),('Bob',19),('Carol', 20)]
       "altura":1.77,
       "cidade":"Belo Horizonte"}
   for chave in x.keys():
+    print(chave)
   ```
   :::result
   cidade<br>
@@ -290,7 +296,7 @@ print(jose) #imprime "José Pereira - 17/10/2018 - ['31-5555-5555']"
   - Python não possui atributos que sejam verdadeiramente privados
 - O prefixo `__` é apenas para indicar que o método/atributo não será sobreposto pelas subclasses
   - Se criarmos um atributo `__a`, ainda podemos acessá-lo de maneira pública usando `_Nome-da-classe__a()`
-
+  - Se fizermos `__a__`, isso não ocorre! Duplo underscore no prefixo e no sufixo indica atributos/metodos/variáveis especiais do python
 ---
 ## Anotação `@property` e o Encapsulamento
 - Vamos supor que temos nossa classe Pessoa
@@ -307,8 +313,9 @@ joao = Pessoa("João")
 joao.nome = "João da Silva"
 ```
 ---
-## Anotação @property
-- Usada para sobrecarregar a atribuição e obtenção de um atributo
+<!-- {"slideHash": "encapsulamento-ex"} -->
+Anotação @property - Usada para sobrecarregar a atribuição e obtenção de um atributo
+
 - Atributos calculados:<!-- {li:style="display: inline-block; width:45%;border-right:1px dashed black; padding-right: 10px;font-size:0.8em;"}-->
   ```python
   class Funcionario():
@@ -356,8 +363,6 @@ class Pessoa():
     return "{prim} {sobrenome}".format(prim=self.prim_nome,sobrenome=self.sobrenome)
   @nome.setter
   def nome(self,val):
-    if(len(val)==0):
-      return
     arr_nomes = val.split(" ")
     self.prim_nome = arr_nomes[0] if len(arr_nomes)>0 else ""
     self.sobrenome = " ".join(arr_nomes[1:])
@@ -374,13 +379,13 @@ joao.nome = "João da Silva"
 ```python
 import datetime date
 class Pessoa():
-  PESSOAS_CRIADAS = 0
+  pessoas_criadas = 0
 
   def __init__(self,nome,data_nascimento=date.today()):
     self.nome = nome
     self.data_nascimento = data_nascimento
     self.telefones = []
-    Pessoa.PESSOAS_CRIADAS += 1
+    Pessoa.pessoas_criadas += 1
 ```
 
 ```python
@@ -388,6 +393,58 @@ class Pessoa():
   maria = Pessoa("Maria")
   print(Pessoa.PESSOAS_CRIADAS) #Imprime 2
 ```
+---
+## Implementando comparadores
+```
+class Pessoa():
+  pessoas_criadas = 0
+
+  def __init__(self,cpf,nome):
+    self.cpf = cpf
+    self.nome = nome
+  def __eq__(self,outro):
+    return self.cpf == outro.cpf
+```
+- Podemos implementar:
+  - `__lt__` (para `<`);    `__gt__` (para `>`)   
+  - `__ne__` (para `!=`)
+  - `__ge__` (para `>=`);   `__le__` (para `<=`)
+
+object.__gt__(self, other) # For x > y
+object.__ge__(self, other) # For x >= y
+
+- Mesmo implemento o `__eq__` você deve implementar o `__ne__`. Para evitar isso, use a anotação `total ordering` [saiba mais](https://docs.python.org/3.5/library/functools.html#functools.total_ordering)
+---
+<!--"slideHash": "nomenclatura"} -->
+## Convenção de nomenclatura
+
+- **Nomes de atributos, métodos e funções**: tudo_minuscula_separando_por_underscores
+- **Classes**: DeveSerCapitalizado
+- **Constantes**: MAISCULAS_SEPARANDO_POR_UNDERSCORES
+[Veja mais aqui](https://www.python.org/dev/peps/pep-0008/)
+---
+<!-- {"layout": "section-header", "slideHash": "pratica"} -->
+# Prática
+## Uso de Programação Orientada a Objetos
+
+- Declaração
+- Construtor  e Instanciação
+- Atributos estáticos e não estáticos
+- Anotação `@property`
+---
+## Classe Autor
+Uma biblioteca possui livros e autores. Livro, autor e biblioteca serão classes que você deverá criar da seguinte forma:
+- Neste código use a convenção de nomenclatura correta ([veja slide](#nomenclatura))
+- **Autor:** Possui o nome representado por três atributos: primeiro, nome, nome do meio e último nome além da  data de nascimento (você pode usar a classe pessoa e adaptá-la). Todos esses atributos devem ser fornecidos no construtor, porém, o nome do meio é opcional (valor default = '').
+  - O autor possuirá o atributo calculado `nome_como_citado` que irá retornar o último nome maiúculo e a primeira letra do primeiro nome e, logo após, um ponto. Exemplo: "DALIP D." sendo que Dalip é o último nome de Daniel é o primeiro nome. Nesse atributo, o nome do meio não será usado.
+---
+## Classe Livro e Biblioteca
+- **Livro:** Possui os atributos: titulo, ano e uma lista de autores
+  - O título não poderá ser vazio, caso seja, você irá lançar uma exceção ValueError. Use a anotação `@property` para isso ([veja slide](#encapsulamento-ex)).
+  - No construtor, a lista de autores pode ser omitida (sendo uma lista vazia  `[]` por padrão)
+- **Biblioteca**: possui uma lista de livros. Ela deve possuir um atributo calculado `livros_por_autor` que utilizará a lista de livros para retornar um dicionário onde cada chave será o nome de um autor e, cada valor, será a lista de livros deste autor.
+
+Para cada uma das classes implementadas, faça o método `__str__` e teste-as fazendo um main e valores fixos
 ---
 # Referências
 
