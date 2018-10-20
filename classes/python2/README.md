@@ -285,11 +285,11 @@ print(jose.telefones) #imprime ["31-5555-5555"]
 print(jose.nome) #imprime 'José Pereira'
 print(jose) #imprime "José Pereira - 17/10/2018 - ['31-5555-5555']"
 ```
-- Os atributos são publicos.
+- Os atributos são públicos.
 - Colocamos com prefixo `_` atributos/métodos para **informarmos** que são privados
   - Python não possui atributos que sejam verdadeiramente privados
 - O prefixo `__` é apenas para indicar que o método/atributo não será sobreposto pelas subclasses
-- Se criarmos um atributo `__a`, ainda podemos acessá-lo de maneira pública usando `_Nome-da-classe__a()`
+  - Se criarmos um atributo `__a`, ainda podemos acessá-lo de maneira pública usando `_Nome-da-classe__a()`
 
 ---
 ## Anotação `@property` e o Encapsulamento
@@ -300,7 +300,7 @@ class Pessoa():
     self.nome = nome
 ```
 
-- Desejamos, agora, alterar o atributo `nome` para `prim_nome` e `ult_nome`.
+- Desejamos, agora, alterar o atributo `nome` para `prim_nome` e `sobrenome`.
 - Como fazer isso sem alterar os locais em que o atributo `nome` foi chamado? Por exemplo:
 ```python
 joao = Pessoa("João")
