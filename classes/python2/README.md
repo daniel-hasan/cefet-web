@@ -12,6 +12,36 @@
 1. [_Statements_](#statements)
 1. [Questões práticas](#execucao)
 
+---
+## Listas - operações úteis
+
+```python
+lista = ["Alice","Bob","Carol","Bob","Débora"]
+lista.sort() #ordena a lista
+listaConcat = lista[1:5] #retorna uma lista a partir da posição 1 até a posição 4
+listaConcat = lista[:5] #retona uma lista da posição 0 até a posição 4
+listaConcat = lista[2:] #retorna a lista sem as psições 0 e 1
+lista.insert(0,"Carlos") #adiciona 'Carlos' no inicio da lista
+
+```
+- **sort**: os tipos devem ser compatíveis para ordenação
+- [Clique aqui para ver documentação completa](https://docs.python.org/3.5/tutorial/datastructures.html#more-on-lists)
+---
+## Strings  - operações úteis
+
+```python
+x = "({ddd}) {telprefixo}-{telfinal}".format(ddd=31,telprefixo=555,telfinal=9875)#x = '(31) 555-9875'
+y = "uma frase de impacto"
+termos = y.split(" ") #termos = ['uma','frase','de','impacto']
+z = "casa".replace("a","x") #z = 'cxsx'
+z = "casa".upper() #z = "CASA"
+#strings podem ser tratadas como uma lista de caracteres
+w = y[0] #w= 'u'
+w = y[4:] #w = 'frase de impacto'
+frutas = ", ".join(["pera","uva","banana"]) #frutas = "pera, uva, banana"
+
+```
+[Veja lista completa de métodos](https://docs.python.org/3.5/library/stdtypes.html#string-methods)
 
 ---
 <!-- {"layout": "section-header", "slideHash": "estruturaDados"} -->
@@ -46,6 +76,10 @@ nome, num = exemplo() #nome = 'casa' e num = 2948
 ## Conjuntos
 
 - Conjunto: coleção **não ordenada** de **elementos únicos**
+- Cada elemento deve ser `hashable`, ou seja:
+  - Imutável
+  - Implementa os métodos: `__hash__()`, `__eq__()` ou `__cmp__()`
+  - Exemplos: string, inteiro, float, tuplas
 - Uso:
 ```python
   frutas = {"pera","uva","banana","banana"} #instanciação
@@ -81,6 +115,8 @@ nome, num = exemplo() #nome = 'casa' e num = 2948
   - Exemplo: string, conjuntos e listas
 - Para criarmos um conjunto vazio, executamos `set()` (e **não** `{}`)
 
+
+
 ```python
   x = set([1,5,6,9]) #x = {1,5,6,9}
   x = set("casa")    #x = {'c', 'a', 's', 'a'}
@@ -89,10 +125,7 @@ nome, num = exemplo() #nome = 'casa' e num = 2948
 ---
 ## Dicionários (1/2)
 - Mapeia uma **chave** a um **valor**
-  - As **chaves** são `hashable`, ou seja:
-    - Imutáveis
-    - Possui os métodos: `__hash__()`, `__eq__()` ou `__cmp__()`
-    - Exemplos: string, inteiro, float, tuplas
+  - As **chaves** são `hashable`
   - Os **valores** podem ser qualquer tipo de dado
 - Uso:
 ```python
@@ -161,7 +194,6 @@ y = x.items() #y = [('Débora',21), ('Alice',16),('Bob',19),('Carol', 20)]
       "altura":1.77,
       "cidade":"Belo Horizonte"}
   for chave in x.keys():
-      print(chave)
   ```
   :::result
   cidade<br>
@@ -172,6 +204,7 @@ y = x.items() #y = [('Débora',21), ('Alice',16),('Bob',19),('Carol', 20)]
 - Pelo **valor**:<!-- {li:style="display: inline-block; width:27%;border-right:1px dashed black; padding-right: 10px;font-size:0.8em;"}-->
   ```python
   x = {"nome":"hasan",
+  print(chave)
       "altura":1.77,
       "cidade":"Belo Horizonte"}
   for valor in x.values():
@@ -211,14 +244,6 @@ Professor: Hasan Cidade: Belo Horizonte<br>
 Professor: Coutinho Cidade: Belo Horizonte
 :::
 
----
-## Listas - operações úteis
-
-
-
----
-## Strings  - operações úteis
-- format, split, replace, upper, lower, substrings...
 
 
 ---
@@ -230,8 +255,6 @@ Professor: Coutinho Cidade: Belo Horizonte
 - Construtor  e Instanciação
 - Atributos estáticos e não estáticos
 - Anotação `@property`
-- Métodos estáticos, não estáticos e abstratos
-- Herança simples e múltipla
 ---
 ## Declaração
 ```python
@@ -263,8 +286,88 @@ print(jose.nome) #imprime 'José Pereira'
 print(jose) #imprime "José Pereira - 17/10/2018 - ['31-5555-5555']"
 ```
 - Os atributos são publicos.
-- Colocamos com prefixo "_" atributos **informarmos** que são privados
-- Podemos usar a anotação `@property` para alterar o comportamento de um atributo
+- Colocamos com prefixo `_` atributos/métodos para **informarmos** que são privados
+  - Python não possui atributos que sejam verdadeiramente privados
+- O prefixo `__` é apenas para indicar que o método/atributo não será sobreposto pelas subclasses
+- Se criarmos um atributo `__a`, ainda podemos acessá-lo de maneira pública usando `_Nome-da-classe__a()`
+
+---
+## Anotação `@property` e o Encapsulamento
+- Vamos supor que temos nossa classe Pessoa
+```python
+class Pessoa():
+  def __init__(self,nome,data_nascimento=date.today()):
+    self.nome = nome
+```
+
+- Desejamos, agora, alterar o atributo `nome` para `prim_nome` e `ult_nome`.
+- Como fazer isso sem alterar os locais em que o atributo `nome` foi chamado? Por exemplo:
+```python
+joao = Pessoa("João")
+joao.nome = "João da Silva"
+```
+---
+## Anotação @property
+- Usada para sobrecarregar a atribuição e obtenção de um atributo
+- Atributos calculados:<!-- {li:style="display: inline-block; width:45%;border-right:1px dashed black; padding-right: 10px;font-size:0.8em;"}-->
+  ```python
+  class Funcionario():
+    def __init__(self,nome,salario):
+      self.nome = nome
+      self.salario = salario
+    @property
+    def salario_liquido(self):
+      return self.salario*0.8
+  ```
+
+- Encapsulamento:<!-- {li:style="display: inline-block; width:50%;font-size:0.8em;"}-->
+  ```python
+  class Funcionario():
+    def __init__(self,nome,salario):
+      self.nome = nome
+      self._salario = salario
+    @property
+    def salario(self):
+      return self._salario
+    @salario.setter
+    def salario(self,val):
+      if(val<0):
+        raise ValueError("Erro: não é possível salário negativo")
+      self._salario = val
+  ```
+---
+## Atributo @property - Acesso ao atributo
+
+```python
+  joao = Funcionario('João',234)
+  print(joao.salario_liquido)
+  joao.salario = 345
+  print(joao.salario)
+  joao.salario_liquido = 45 #erro 'AttributeError: can't set attribute'
+```
+---
+## Alteração do atributo `nome` da classe Pessoa
+```python
+class Pessoa():
+  def __init__(self,nome,data_nascimento=date.today()):
+    self.nome = nome
+  @property
+  def nome(self):
+    return "{prim} {sobrenome}".format(prim=self.prim_nome,sobrenome=self.sobrenome)
+  @nome.setter
+  def nome(self,val):
+    if(len(val)==0):
+      return
+    arr_nomes = val.split(" ")
+    self.prim_nome = arr_nomes[0] if len(arr_nomes)>0 else ""
+    self.sobrenome = " ".join(arr_nomes[1:])
+```
+- Assim, o código abaixo irá funcionar, sem ser modificado:
+```python
+joao = Pessoa("João")
+joao.nome = "João da Silva"
+```
+
 ---
 ## Atributos estáticos
 - São criados dentro da classe
@@ -285,7 +388,6 @@ class Pessoa():
   maria = Pessoa("Maria")
   print(Pessoa.PESSOAS_CRIADAS) #Imprime 2
 ```
-
 ---
 # Referências
 
