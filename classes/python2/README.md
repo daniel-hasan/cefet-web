@@ -395,7 +395,8 @@ class Pessoa():
 ```
 ---
 ## Implementando comparadores
-```
+
+```python
 class Pessoa():
   pessoas_criadas = 0
 
@@ -410,10 +411,8 @@ class Pessoa():
   - `__ne__` (para `!=`)
   - `__ge__` (para `>=`);   `__le__` (para `<=`)
 
-object.__gt__(self, other) # For x > y
-object.__ge__(self, other) # For x >= y
 
-- Mesmo implemento o `__eq__` você deve implementar o `__ne__`. Para evitar isso, use a anotação `total ordering` [saiba mais](https://docs.python.org/3.5/library/functools.html#functools.total_ordering)
+- Mesmo implementando `__eq__` você deve implementar o `__ne__`. Para evitar isso, use a anotação `total_ordering` [saiba mais](https://docs.python.org/3.5/library/functools.html#functools.total_ordering)
 ---
 <!--"slideHash": "nomenclatura"} -->
 ## Convenção de nomenclatura
