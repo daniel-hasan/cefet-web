@@ -391,7 +391,7 @@ class Pessoa():
 ```python
   jose = Pessoa("José")
   maria = Pessoa("Maria")
-  print(Pessoa.PESSOAS_CRIADAS) #Imprime 2
+  print(Pessoa.pessoas_criadas) #Imprime 2
 ```
 ---
 ## Implementando comparadores
@@ -426,9 +426,10 @@ class Pessoa():
 # Prática
 ## Uso de Programação Orientada a Objetos
 
-- Implementação de classes
-- Encapsulamento
-- Uso de dicionários e listas
+- Declaração
+- Construtor  e Instanciação
+- Atributos estáticos e não estáticos
+- Anotação `@property`
 ---
 ## Classe Autor
 Uma biblioteca possui livros e autores. Livro, autor e biblioteca serão classes que você deverá criar da seguinte forma:
