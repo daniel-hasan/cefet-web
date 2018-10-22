@@ -426,10 +426,9 @@ class Pessoa():
 # Prática
 ## Uso de Programação Orientada a Objetos
 
-- Declaração
-- Construtor  e Instanciação
-- Atributos estáticos e não estáticos
-- Anotação `@property`
+- Implementação de classes
+- Encapsulamento
+- Uso de dicionários e listas
 ---
 ## Classe Autor
 Uma biblioteca possui livros e autores. Livro, autor e biblioteca serão classes que você deverá criar da seguinte forma:
