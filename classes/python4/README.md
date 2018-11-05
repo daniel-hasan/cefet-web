@@ -12,9 +12,7 @@
 ---
 ## Arquivos do projeto
 
-:::result
 ![](../../images/dir-django-app.png)
-:::
 
 ---
 ## Templates
