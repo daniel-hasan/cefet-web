@@ -2,14 +2,6 @@
 # Django Templates
 ## Templates, arquivos estáticos e URLs
 ---
-<!-- {"layout": "section-header", "slideHash": "classes"} -->
-# Mais sobre sintaxe
-## Herança e Métodos abstratos e estáticos
-
-- Heraça
-- `@classmethod` e `@staticmethod`
-- import
----
 ## Principais Componentes  Django
 
 - **Template**: Exibição do html (muitas vezes, dinamico)
