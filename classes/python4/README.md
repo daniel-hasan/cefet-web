@@ -142,6 +142,7 @@ class Home(TemplateView):
 ```
 
 ---
+<!-- { "slideHash": "urls"} -->
 ## URLs
 
 - O arquivo `urls.py` indica quais URLs estão disponíveis em um projeto Django
@@ -163,9 +164,10 @@ urlpatterns = [
   ```
 
 ---
+<!-- { "slideHash": "static"} -->
 ## Arquivos estáticos
 - Salvamos os arquivos estaticos (imagens, CSS e JS) em uma pasta separada
-- Por padrão, ele fica dentro a pasta do **app** podendo ser alterada em `settings.py`
+- Pasta de nome `static`, por padrão, fica dentro a pasta do **app** podendo ser alterada em `settings.py`
 - `load static`: Comando para usarmos os endereços estáticos
 - `static`: comando/tag Para que seja renderizado um endereço estático
 ```html
