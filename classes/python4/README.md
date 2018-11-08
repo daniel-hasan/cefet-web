@@ -4,7 +4,7 @@
 ---
 ## Principais Componentes  Django
 
-- **Template**: Exibição do html (muitas vezes, dinamico)
+- **Template**: Exibição do html (usualmente, dinâmico)
 - **View**: Obtenção da resposta e renderização do **template**. Se necessário, consultando o banco de dados pelos **models**
 - **Models**: Responsável pela persistência/gerenciamento dos dados
 
@@ -100,7 +100,7 @@ TEMPLATES = [
   ```
 - **home.html**:<!-- {li:style="display: inline-block; width:35%;border-right:1px dashed black; padding-right: 10px;font-size:0.8em;"}-->
   ```html
-  {% extends "base.html" %}
+  {% extends "principal.html" %}
   {% block titulo %}Home{% endblock%}
   {% block conteudo %}
   Conteúdo do Home :D
@@ -108,7 +108,7 @@ TEMPLATES = [
   ```
   **história.html**:
   ```html
-  {% extends "base.html" %}
+  {% extends "principal.html" %}
   {% block titulo %}Hitória{% endblock%}
   {% block conteudo %}
   História :D
