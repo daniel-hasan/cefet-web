@@ -2,17 +2,9 @@
 # Django Templates
 ## Templates, arquivos estáticos e URLs
 ---
-<!-- {"layout": "section-header", "slideHash": "classes"} -->
-# Mais sobre sintaxe
-## Herança e Métodos abstratos e estáticos
-
-- Heraça
-- `@classmethod` e `@staticmethod`
-- import
----
 ## Principais Componentes  Django
 
-- **Template**: Exibição do html (muitas vezes, dinamico)
+- **Template**: Exibição do html (usualmente, dinâmico)
 - **View**: Obtenção da resposta e renderização do **template**. Se necessário, consultando o banco de dados pelos **models**
 - **Models**: Responsável pela persistência/gerenciamento dos dados
 
@@ -20,9 +12,7 @@
 ---
 ## Arquivos do projeto
 
-:::result
 ![](../../images/dir-django-app.png)
-:::
 
 ---
 ## Templates
@@ -110,7 +100,7 @@ TEMPLATES = [
   ```
 - **home.html**:<!-- {li:style="display: inline-block; width:35%;border-right:1px dashed black; padding-right: 10px;font-size:0.8em;"}-->
   ```html
-  {% extends "base.html" %}
+  {% extends "principal.html" %}
   {% block titulo %}Home{% endblock%}
   {% block conteudo %}
   Conteúdo do Home :D
@@ -118,7 +108,7 @@ TEMPLATES = [
   ```
   **história.html**:
   ```html
-  {% extends "base.html" %}
+  {% extends "principal.html" %}
   {% block titulo %}Hitória{% endblock%}
   {% block conteudo %}
   História :D
@@ -142,6 +132,7 @@ class Home(TemplateView):
 ```
 
 ---
+<!-- { "slideHash": "urls"} -->
 ## URLs
 
 - O arquivo `urls.py` indica quais URLs estão disponíveis em um projeto Django
@@ -163,9 +154,10 @@ urlpatterns = [
   ```
 
 ---
+<!-- { "slideHash": "static"} -->
 ## Arquivos estáticos
 - Salvamos os arquivos estaticos (imagens, CSS e JS) em uma pasta separada
-- Por padrão, ele fica dentro a pasta do **app** podendo ser alterada em `settings.py`
+- Pasta de nome `static`, por padrão, fica dentro a pasta do **app** podendo ser alterada em `settings.py`
 - `load static`: Comando para usarmos os endereços estáticos
 - `static`: comando/tag Para que seja renderizado um endereço estático
 ```html
