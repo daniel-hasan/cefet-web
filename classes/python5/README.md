@@ -336,7 +336,7 @@ class SalvarTesouro(View):
 ---
 ## Prática
 
-- Objetivo: treinar criação de visões e templates, acesso ao modelo pela visão
+- Objetivo: treinar a criação de visões e templates, acesso ao modelo pela visão
 
 [Clique aqui e faça o download](https://github.com/daniel-hasan/cefet-web-pirates-django/archive/master.zip). Instruções no SIGA.
 
